@@ -360,16 +360,16 @@ bar {
 
     colors {
         background #000000
-        statusline #40d19e 
+        statusline #b73838 
         separator  #000000
 
-#                      border  backgr. text
-        focused_workspace  #40d19e #40d19e #000000
-        active_workspace   #595B5B #353836 #40d19e 
-        inactive_workspace #000000 #000000 #40d19e 
-        binding_mode       #000000 #000000 #40d19e 
+#                          border  backgr. text
+        focused_workspace  #b73838 #b73838 #000000
+        active_workspace   #595B5B #353836 #b73838 
+        inactive_workspace #000000 #000000 #b73838 
+        binding_mode       #000000 #000000 #b73838 
         urgent_workspace   #000000 #8dd140 #000000
-         
+        
     }
 }
 

@@ -62,7 +62,7 @@ threshold_type = time
 tztime local {
 # format = "%Y-%m-%d %H:%M:%S"
 # format = " %d.%m. %H:%M "
-format = " %a %d %b %Y   %I:%M:%S"
+format = " %a %d %b %Y   %I:%M:%S %p"
 }
 
 # run_watch DHCP {
