@@ -355,6 +355,7 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
+
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	i3bar_command i3bar
@@ -377,7 +378,7 @@ bar {
     colors {
         background #000000
         statusline #b73838 
-        separator  #b73838
+        separator  #000000
 
 #                          border  backgr. text
         focused_workspace  #b73838 #b73838 #000000
