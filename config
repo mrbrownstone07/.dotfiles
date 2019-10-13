@@ -36,10 +36,10 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec --no-startup-id dmenu_recency
 
 #start rofi (run mode)
-bindsym $mod+d exec rofi -show run -i -lines 15 -eh 1 -width 50 -padding 10 -opacity "85" #-config ~/.i3/rofi/config.rasi 
+bindsym $mod+d exec rofi -show run -i -lines 15 -eh 1 -width 50 -padding 10
 
 # start rofi (window mode)
-bindsym $mod+Tab exec rofi -show window -i -lines 10 -eh 1 -width 50 -padding 10 -opacity "85"
+bindsym $mod+Tab exec rofi -show window -i -lines 6 -eh 1 -width 50 -padding
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu

@@ -67,7 +67,7 @@ URxvt*internalBorder: 20
 URxvt*externalBorder: 0
 URxvt*letterSpace: 0
 !URxvt.font: xft:DejaVu Sans Mono:autohint=true:size=9,xft:Inconsolata\ for\ Powerline:autohint=true:size=9
-URxvt.font: 9x13,xft:TerminessTTFNerdFontMono
+URxvt.font: 9x15,xft:TerminessTTFNerdFontMono
 !URxvt.font: Monospace 12 
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
 URxvt.copyCommand: xclip -i -selection clipboard
