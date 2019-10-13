@@ -1,0 +1,11 @@
+rofi.hide-scrollbar:	true
+rofi.modi:		combi
+rofi.terminal:		alacritty
+rofi.kb-cancel:		Escape,Alt+F1,Alt+F2
+rofi.lines:		15
+rofi.soft:		true
+rofi.sorting-method:	fzf
+rofi.combi-modi:	drun,run
+rofi.combi-hide-mode-prefix:	true
+rofi.display-combi:	Search
+rofi.theme: /home/mahdi/.local/share/rofi/themes/madcap.rasi
