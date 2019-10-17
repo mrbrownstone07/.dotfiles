@@ -27,22 +27,38 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminal
+#bindsym $mod+Return exec terminal
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start program launcher
-#bindsym $mod+d exec --no-startup-id dmenu_recency
+bindsym $mod+z exec dmenu_run
 
-#start rofi (run mode)
-bindsym $mod+d exec rofi -show run -i -lines 15 -eh 1 -width 50 -padding 10
+################################################################################################
+##                                      rofi section                                          ##
+################################################################################################
 
-# start rofi (window mode)
-bindsym $mod+Tab exec rofi -show window -i -lines 6 -eh 1 -width 50 -padding
+        #start rofi (run mode)
+        #bindsym $mod+d exec rofi -show run -i -lines 15 -eh 1 -width 50 -padding 10
+
+        #rofi(combi mode)
+        bindsym $mod+d exec rofi -show combi -line 15 -width 50
+        
+        #rofi(kill mode)
+        bindsym $mod+x exec rofi -show Kill -i -lines 6 -eh 1 -width 50 -modi Kill:$HOME/.i3/rofi/kill.sh
+        
+        #rofi (window switch mode)
+        bindsym $mod+Tab exec rofi -show window -i -lines 6 -eh 1 -width 50 -padding
+
+        #rofi (power mode)
+        #bindsym $mod+z exec rofi -show Power -i -lines 6 -eh 1 -width 50 -modi Power:$HOME/.i3/rofi/power.sh  
+
+################################################################################################
 
 # launch categorized menu
-bindsym $mod+z exec --no-startup-id morc_menu
+#bindsym $mod+z exec --no-startup-id morc_menu
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -149,7 +165,7 @@ bindsym $mod+Ctrl+Left workspace prev
 #                 set $ws2 2:
 set $ws1 
 set $ws2 
-set $ws3 
+set $ws3 
 set $ws4 
 set $ws5 
 set $ws6 
@@ -305,7 +321,7 @@ exec --no-startup-id clipit
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec --no-startup-id terminal
+exec --no-startup-id st
 #exec --no-startup-id lxsession
 
 # Color palette used for the terminal ( ~/.Xresources file )
@@ -361,7 +377,7 @@ bar {
     colors {
         background #000000
         statusline #b73838 
-        separator  #000000
+        separator  #b73838
 
 #                          border  backgr. text
         focused_workspace  #b73838 #b73838 #000000
@@ -392,7 +408,7 @@ bindsym $mod+m bar mode toggle
 
 # Set inner/outer gaps
 gaps inner 14
-gaps outer -2
+gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>

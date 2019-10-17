@@ -1,7 +1,7 @@
 general {
 colors = yes
 interval = 5
-color_good = "#2ECC71"
+color_good = "#b73838"
 color_bad = "#E74C3C"
 #	color_degraded = " "
 }
@@ -10,7 +10,7 @@ order += "cpu_usage"
 order += "load"
 order += "disk /"
 order += "disk /home"
-#order += "wireless wlp5s0"
+order += "wireless wlp2s0"
 #order += "ethernet enp1s0f0"
 order += "tztime local"
 order += "battery 0"
@@ -35,10 +35,15 @@ disk "/home" {
 format = " %avail "
 }
 
-wireless wlp5s0 {
-format_up = " %quality  %essid  %ip"
+#wireless wlp2s0 {
+#format_up = " %quality  %essid  %ip"
 # format_up = "wlp5s0  %quality  %essid   %bitrate  %ip"
-format_down = "⬇"
+#format_down = "⬇"
+#}
+
+wireless wlp2s0 {
+    format_up = "%quality "
+    format_down = "⬇ D"
 }
 
 ethernet enp1s0f0 {
