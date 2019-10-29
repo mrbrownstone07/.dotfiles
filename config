@@ -36,6 +36,9 @@ bindsym $mod+Shift+q kill
 # start program launcher
 bindsym $mod+z exec dmenu_run
 
+#launch surf
+bindsym Ctrl+Shift+s exec tabbed surf -Pe
+
 ################################################################################################
 ##                                      rofi section                                          ##
 ################################################################################################
@@ -78,10 +81,8 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec palemoon
-bindsym $mod+F3 exec pcmanfm
-# bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec gksu pcmanfm
+
+
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
@@ -91,6 +92,12 @@ bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+#my added keys
+bindsym $mod+F1 exec st -e nnn
+bindsym $mod+F2 exec st -e getMusic.sh
+bindsym $mod+F3 exec firefox
+bindsym $mod+F4 exec pcmanfm
+bindsym $mod+Shift+F4 exec gksu pcmanfm
 
 # focus_follows_mouse no
 
@@ -221,6 +228,8 @@ assign [class="Chromium"] $ws3
 assign [class="qBittorrent"] $ws4
 assign [class="Epdfview"] $ws5
 assign [class="okular"] $ws5
+assign [class="tabbed"] $ws3
+ 
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -316,7 +325,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-# exec --no-startup-id start_conky_maia
+#exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
