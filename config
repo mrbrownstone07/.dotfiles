@@ -98,6 +98,7 @@ bindsym $mod+F2 exec st -e getMusic.sh
 bindsym $mod+F3 exec firefox
 bindsym $mod+F4 exec pcmanfm
 bindsym $mod+Shift+F4 exec gksu pcmanfm
+bindsym $mod+F6 exec st -e ncmpcpp  
 
 # focus_follows_mouse no
 
@@ -368,7 +369,8 @@ set_from_resource $term_color15    color15
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	i3bar_command i3bar
-	status_command i3status -c ~/.i3/i3status/config
+	    #istatus_command mystatus.sh -c ~/.i3/i3status/config
+    status_command i3status -c ~/.i3/i3status/config
         #status_command i3status
         #status_command ~/bin/i3conky_dp
 	position top
@@ -385,16 +387,16 @@ bar {
 	strip_workspace_numbers yes
 
     colors {
-        background #000000
+        background  #0a0a0a
         statusline #b73838 
-        separator  #000000
+        separator   #0a0a0a
 
 #                          border  backgr. text
-        focused_workspace  #b73838 #b73838 #000000
+        focused_workspace  #b73838 #b73838 #0a0a0a
         active_workspace   #595B5B #353836 #b73838 
-        inactive_workspace #000000 #000000 #b73838 
-        binding_mode       #000000 #000000 #b73838 
-        urgent_workspace   #000000 #8dd140 #000000
+        inactive_workspace #0a0a0a #0a0a0a #b73838 
+        binding_mode       #0a0a0a #0a0a0a #b73838 
+        urgent_workspace   #0a0a0a #8dd140 #0a0a0a
         
     }
 }
@@ -404,7 +406,7 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #000000 #000000 #ffffff #FDF6E3
+  client.focused          #000000 #000000 #FDF6E3
   client.focused_inactive #212020 #212020 #1ABC9C #454948
   client.unfocused        #212020 #212020 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
