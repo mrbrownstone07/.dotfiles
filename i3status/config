@@ -1,16 +1,16 @@
 general {
 colors = yes
 interval = 5
-color_good = "#b73838"
+color_good = "#88c0d0"
 color_bad = "#E74C3C"
 #	color_degraded = " "
 }
 
 order += "cpu_usage"
 order += "load"
-order += "disk /"
-order += "disk /home"
-order += "wireless wlp2s0"
+#order += "disk /"
+#order += "disk /home"
+#order += "wireless wlp2s0"
 #order += "ethernet enp1s0f0"
 order += "tztime local"
 order += "battery 0"

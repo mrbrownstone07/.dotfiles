@@ -34,7 +34,7 @@ bindsym $mod+Return exec st
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+z exec dmenu_run
+bindsym $mod+z exec "dmenu_run -nf '#88C0D0' -nb '#0A0A0A' -sb '#88C0D0' -sf '#0A0A0A' -fn 'monospace-10'"
 
 #launch surf
 bindsym Ctrl+Shift+s exec tabbed surf -Pe
@@ -171,14 +171,14 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 
-set $ws2 
-set $ws3 
-set $ws4 
-set $ws5 
-set $ws6 
-set $ws7 
-set $ws8 
+set $ws1 "  "
+set $ws2 "  "
+set $ws3 "  "
+set $ws4 "  "
+set $ws5 "  "
+set $ws6 "  "
+set $ws7 "  "
+set $ws8 "  "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -211,26 +211,28 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
-# assign [class="Pale moon"] $ws2
-assign [class="Pcmanfm"] $ws6
-# assign [class="Skype"] $ws5
-assign [class="Pale moon"] $ws3
-assign [class="firefox"] $ws3
-assign [class="Firefox"] $ws3
+
 assign [class="Code"] $ws2
 assign [class="code-oss"] $ws2
 assign [class="Mousepad"] $ws2
 assign [class="Subl3"] $ws2
 assign [class="Atom"] $ws2
-assign [class="vlc"] $ws8
-assign [class="dolphin"] $ws6
+
+assign [class="firefox"] $ws3
+assign [class="Firefox"] $ws3
 assign [class="Chromium"] $ws3
+assign [class="tabbed"] $ws3
+
 assign [class="qBittorrent"] $ws4
+assign [class="Transmission-gtk"] $ws4
+
 assign [class="Epdfview"] $ws5
 assign [class="okular"] $ws5
-assign [class="tabbed"] $ws3
- 
+
+assign [class="Pcmanfm"] $ws6
+assign [class="dolphin"] $ws6
+
+assign [class="vlc"] $ws8
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -388,15 +390,15 @@ bar {
 
     colors {
         background  #0a0a0a
-        statusline #b73838 
+        statusline  #88c0d0
         separator   #0a0a0a
 
 #                          border  backgr. text
-        focused_workspace  #b73838 #b73838 #0a0a0a
-        active_workspace   #595B5B #353836 #b73838 
-        inactive_workspace #0a0a0a #0a0a0a #b73838 
-        binding_mode       #0a0a0a #0a0a0a #b73838 
-        urgent_workspace   #0a0a0a #8dd140 #0a0a0a
+        focused_workspace  #88c0d0 #88c0d0 #0a0a0a
+        active_workspace   #353836 #353836 #88c0d0
+        inactive_workspace #0a0a0a #0a0a0a #88c0d0
+        binding_mode       #0a0a0a #0a0a0a #dfb4a2
+        urgent_workspace   #8dd140 #8dd140 #0a0a0a
         
     }
 }
