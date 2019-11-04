@@ -34,7 +34,7 @@ bindsym $mod+Return exec st
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+z exec "dmenu_run -nf '#88C0D0' -nb '#0A0A0A' -sb '#88C0D0' -sf '#0A0A0A' -fn 'monospace-10'"
+bindsym $mod+z exec "dmenu_run -nf '#b73838' -nb '#0A0A0A' -sb '#b73838' -sf '#0A0A0A' -fn 'monospace-10'"
 
 #launch surf
 bindsym Ctrl+Shift+s exec tabbed surf -Pe
@@ -94,10 +94,9 @@ bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 #my added keys
 bindsym $mod+F1 exec st -e nnn
-bindsym $mod+F2 exec st -e getMusic.sh
 bindsym $mod+F3 exec firefox
 bindsym $mod+F4 exec pcmanfm
-bindsym $mod+Shift+F4 exec gksu pcmanfm
+#bindsym $mod+Shift+F4 exec gksu pcmanfm
 bindsym $mod+F6 exec st -e ncmpcpp  
 
 # focus_follows_mouse no
@@ -230,6 +229,7 @@ assign [class="Epdfview"] $ws5
 assign [class="okular"] $ws5
 
 assign [class="Pcmanfm"] $ws6
+assign [class="Thunar"] $ws6
 assign [class="dolphin"] $ws6
 
 assign [class="vlc"] $ws8
@@ -335,6 +335,8 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id st
 #exec --no-startup-id lxsession
+exec --no-startup-id devilspie
+
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -368,16 +370,16 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 
+##front_color   #b73838
+##back_color    #0a0a0a
+
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	i3bar_command i3bar
-	    #istatus_command mystatus.sh -c ~/.i3/i3status/config
-    status_command i3status -c ~/.i3/i3status/config
-        #status_command i3status
-        #status_command ~/bin/i3conky_dp
-	position top
+        status_command i3status -c ~/.i3/i3status/config
+#        status_command i3block
+	    position bottom
+	    i3bar_command i3bar --transparency
         
-
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
 #	tray_output eDP1
@@ -385,22 +387,20 @@ bar {
 	bindsym button4 nop
 	bindsym button5 nop
 	font pango:Inconsolata 11
-#    font xft:URWGothic-Book 11
 	strip_workspace_numbers yes
 
-    colors {
-        background  #0a0a0a
-        statusline  #88c0d0
-        separator   #0a0a0a
+        colors {
+                background  #0a0a0a00
+                statusline  #b73838
+                separator   #0a0a0a00
 
-#                          border  backgr. text
-        focused_workspace  #88c0d0 #88c0d0 #0a0a0a
-        active_workspace   #353836 #353836 #88c0d0
-        inactive_workspace #0a0a0a #0a0a0a #88c0d0
-        binding_mode       #0a0a0a #0a0a0a #dfb4a2
-        urgent_workspace   #8dd140 #8dd140 #0a0a0a
-        
-    }
+#                                  border       backgr.         text
+                focused_workspace  #b73838      #b73838         #0a0a0a00
+                active_workspace   #35383600    #35383600       #b73838
+                inactive_workspace #0a0a0a00    #0a0a0a00       #b73838
+                binding_mode       #0a0a0a00    #0a0a0a00       #dfb4a2
+                urgent_workspace   #8dd140      #8dd140         #0a0a0a
+        }
 }
 
 # hide/unhide i3status bar
@@ -412,7 +412,7 @@ bindsym $mod+m bar mode toggle
   client.focused_inactive #212020 #212020 #1ABC9C #454948
   client.unfocused        #212020 #212020 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+  client.placeholder      #000000 #0c0c0c #b73838 #000000 
 
   client.background       #2B2C2B
 
@@ -421,7 +421,7 @@ bindsym $mod+m bar mode toggle
 #############################
 
 # Set inner/outer gaps
-gaps inner 14
+gaps inner 10
 gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
