@@ -376,9 +376,9 @@ set_from_resource $term_color15    color15
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
         status_command i3status -c ~/.i3/i3status/config
-#        status_command i3block
-	    position bottom
-	    i3bar_command i3bar --transparency
+#        status_command ~/bumblebee-status/bumblebee-status -m cpu memory battery date time pasource pasink -t solarized-powerline
+	position top
+#	    i3bar_command i3bar --transparency
         
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
@@ -390,16 +390,16 @@ bar {
 	strip_workspace_numbers yes
 
         colors {
-                background  #0a0a0a00
+                background  #0a0a0a
                 statusline  #b73838
-                separator   #0a0a0a00
+                separator   #0a0a0a
 
-#                                  border       backgr.         text
-                focused_workspace  #b73838      #b73838         #0a0a0a00
-                active_workspace   #35383600    #35383600       #b73838
-                inactive_workspace #0a0a0a00    #0a0a0a00       #b73838
-                binding_mode       #0a0a0a00    #0a0a0a00       #dfb4a2
-                urgent_workspace   #8dd140      #8dd140         #0a0a0a
+#                                  border     backgr.       text
+                focused_workspace  #b73838    #b73838       #0a0a0a
+                active_workspace   #353836    #353836       #b73838
+                inactive_workspace #0a0a0a    #0a0a0a       #b73838
+                binding_mode       #0a0a0a    #0a0a0a       #dfb4a2
+                urgent_workspace   #8dd140    #8dd140       #0a0a0a
         }
 }
 
@@ -421,7 +421,7 @@ bindsym $mod+m bar mode toggle
 #############################
 
 # Set inner/outer gaps
-gaps inner 10
+gaps inner 14
 gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.

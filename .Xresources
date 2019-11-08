@@ -1,44 +1,46 @@
 ! ------------------------------------------------------------------------------
 ! theme colors
 ! ------------------------------------------------------------------------------
-!! Colorscheme
 
 ! special
-*.foreground: #93a1a1
-*.background: #141c21
-*.cursorColor: #afbfbf
+*.foreground:   #aed8cc
+*.background:   #000000
+*.cursorColor:  #900C3F 
 
 ! black
-*.color0: #263640
-*.color8: #4a697d
+*.color0:       #272822
+*.color8:       #75715e
 
 ! red
-*.color1: #d12f2c
-*.color9: #fa3935
+*.color1:       #f92672
+*.color9:       #f92672
 
 ! green
-*.color2: #819400
-*.color10: #a4bd00
+*.color2:       #a6e22e
+*.color10:      #a6e22e
 
 ! yellow
-*.color3: #b08500
-*.color11: #d9a400
+*.color3:       #f4bf75
+*.color11:      #f4bf75
 
 ! blue
-*.color4: #2587cc
-*.color12: #2ca2f5
+*.color4:       #66d9ef
+*.color12:      #66d9ef
 
 ! magenta
-*.color5: #696ebf
-*.color13: #8086e8
+*.color5:       #ae81ff
+*.color13:      #ae81ff
 
 ! cyan
-*.color6: #289c93
-*.color14: #33c5ba
+*.color6:       #a1efe4
+*.color14:      #a1efe4
 
 ! white
-*.color7: #bfbaac
-*.color15: #fdf6e3
+*.color7:       #c0dad5
+*.color15:      #cbc0da
+
+!___________________________
+
 
 
 ! ------------------------------------------------------------------------------
@@ -60,15 +62,22 @@ URxvt*saveline: 15000
 URxvt*termName: rxvt-256color
 URxvt*iso14755: false
 URxvt*depth: 32
-URxvt*background: [70]#000
+URxvt*background: [70]#000000
 URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 URxvt*internalBorder: 20
 URxvt*externalBorder: 0
 URxvt*letterSpace: 0
 !URxvt.font: xft:DejaVu Sans Mono:autohint=true:size=9,xft:Inconsolata\ for\ Powerline:autohint=true:size=9
-URxvt.font: 9x15,xft:TerminessTTFNerdFontMono
-!URxvt.font: Monospace 12 
+!URxvt.font: 9x15,xft:TerminessTTFNerdFontMono
+!URxvt.font: Monospace 13
+!URxvt.font: 9x15,xft:TerminessTTFNerdFontMono, Powerline:autohint=true:size=9
+URxvt.font: xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true\ , Powerline:size=12
+!urxvt*font: xft:Terminus:pixelsize=12,xft:Inconsolata\ for\ Powerline:pixelsize=12
+!URxvt*font: xft:Terminess Powerline:size=12
+
+!URxvt*font: DejaVu Sans Mono Book:size=12:antialias=false
+
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
@@ -83,6 +92,7 @@ URxvt.tabbed.tabbar-bg: 16
 URxvt.tabbed.tab-fg: 15
 URxvt.tabbed.tab-bg: 4
 URxvt*buffered: false
+URxvt.cursorColor:  #31e62b 
 
 ! ------------------------------------------------------------------------------
 ! UXTerm
@@ -104,3 +114,10 @@ UXTerm*jumpScroll: true
 UXTerm*multiScroll: true
 UXTerm*toolBar: false
 
+
+!-----------------------------------------------------------------
+!ST  
+!---------------------------------------------------------------
+St.font: Liberation Mono:pixelsize=13RR:antialias=true:autohint=true;
+st.internalBorder: 20px
+*.alpha: 0.80
