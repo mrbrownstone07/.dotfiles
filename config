@@ -28,13 +28,13 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec $TERMINAL
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+z exec "dmenu_run -nf '#b73838' -nb '#0A0A0A' -sb '#b73838' -sf '#0A0A0A' -fn 'monospace-10'"
+bindsym $mod+d exec "dmenu_run -nf '#b73838' -nb '#0A0A0A' -sb '#b73838' -sf '#0A0A0A' -fn 'monospace-10'"
 
 #launch surf
 bindsym Ctrl+Shift+s exec tabbed surf -Pe
@@ -47,13 +47,13 @@ bindsym Ctrl+Shift+s exec tabbed surf -Pe
         #bindsym $mod+d exec rofi -show run -i -lines 15 -eh 1 -width 50 -padding 10
 
         #rofi(combi mode)
-        bindsym $mod+d exec rofi -show combi -line 15 -width 50
+        #bindsym $mod+d exec rofi -show combi -line 15 -width 50
         
         #rofi(kill mode)
-        bindsym $mod+x exec rofi -show Kill -i -lines 6 -eh 1 -width 50 -modi Kill:$HOME/.i3/rofi/kill.sh
+        #bindsym $mod+x exec rofi -show Kill -i -lines 6 -eh 1 -width 50 -modi Kill:$HOME/.i3/rofi/kill.sh
         
         #rofi (window switch mode)
-        bindsym $mod+Tab exec rofi -show window -i -lines 6 -eh 1 -width 50 -padding
+        #bindsym $mod+Tab exec rofi -show window -i -lines 6 -eh 1 -width 50 -padding
 
         #rofi (power mode)
         #bindsym $mod+z exec rofi -show Power -i -lines 6 -eh 1 -width 50 -modi Power:$HOME/.i3/rofi/power.sh  
@@ -373,11 +373,14 @@ set_from_resource $term_color15    color15
 ##front_color   #b73838
 ##back_color    #0a0a0a
 
+set $front     #b73838
+set $back      #0a0a0a00
+
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
         status_command i3status -c ~/.i3/i3status/config
 	position top
-#	    i3bar_command i3bar --transparency
+	i3bar_command i3bar --transparency
         
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
@@ -389,15 +392,16 @@ bar {
 	strip_workspace_numbers yes
 
         colors {
-                background  #0a0a0a
+                background  $back
                 statusline  #b73838
-                separator   #0a0a0a
+    
+                separator   $back
 
 #                                  border     backgr.       text
-                focused_workspace  #b73838    #b73838       #0a0a0a
+                focused_workspace  $front     $front        #0a0a0a
                 active_workspace   #353836    #353836       #b73838
-                inactive_workspace #0a0a0a    #0a0a0a       #b73838
-                binding_mode       #0a0a0a    #0a0a0a       #dfb4a2
+                inactive_workspace $back      $back         #b73838
+                binding_mode       $back      $back         #dfb4a2
                 urgent_workspace   #8dd140    #8dd140       #0a0a0a
         }
 }
@@ -420,7 +424,7 @@ bindsym $mod+m bar mode toggle
 #############################
 
 # Set inner/outer gaps
-gaps inner 14
+gaps inner 10
 gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
