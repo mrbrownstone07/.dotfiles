@@ -8,8 +8,8 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 1
-new_float normal
+new_window none
+new_float none
 
 # Hide borders
 hide_edge_borders none
@@ -28,13 +28,13 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec terminal
-bindsym $mod+Return exec $TERMINAL
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec "dmenu_run -nf '#b73838' -nb '#0A0A0A' -sb '#b73838' -sf '#0A0A0A' -fn 'monospace-10'"
+bindsym $mod+d exec "dmenu_run -nf '#DFDFDF' -nb '#171717' -sb '#5D5858' -sf '#DFDFDF' -fn 'Inconsolata-11'"
 
 #launch surf
 bindsym Ctrl+Shift+s exec tabbed surf -Pe
@@ -83,7 +83,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 
 
-bindsym $mod+F5 exec terminal -e 'mocp'
+bindsym $mod+F5 exec st -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -170,14 +170,14 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 "  "
-set $ws2 "  "
-set $ws3 "  "
-set $ws4 "  "
-set $ws5 "  "
-set $ws6 "  "
-set $ws7 "  "
-set $ws8 "  "
+set $ws1 "  " 
+set $ws2 "  " 
+set $ws3 "  " 
+set $ws4 "  " 
+set $ws5 "  " 
+set $ws6 "  " 
+set $ws7 "  " 
+set $ws8 "  " 
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -235,31 +235,31 @@ assign [class="dolphin"] $ws6
 assign [class="vlc"] $ws8
 
 # Open specific applications in floating mode
-for_window [title="alsamixer"] floating enable border pixel 1
-for_window [class="calamares"] floating enable border normal
+for_window [title="alsamixer"] floating enable 
+for_window [class="calamares"] floating enable 
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
-for_window [class="Galculator"] floating enable border pixel 1
-for_window [class="GParted"] floating enable border normal
-for_window [title="i3_help"] floating enable sticky enable border normal
+for_window [class="Galculator"] floating enable 
+for_window [class="GParted"] floating enable 
+for_window [title="i3_help"] floating enable sticky enable
 for_window [class="Lightdm-settings"] floating enable
-for_window [class="Lxappearance"] floating enable sticky enable border normal
+for_window [class="Lxappearance"] floating enable sticky enable 
 for_window [class="Manjaro-hello"] floating enable
-for_window [class="Manjaro Settings Manager"] floating enable border normal
+for_window [class="Manjaro Settings Manager"] floating enable 
 for_window [title="MuseScore: Play Panel"] floating enable
-for_window [class="Nitrogen"] floating enable sticky enable border normal
+#for_window [class="Nitrogen"] floating enable sticky enable 
 for_window [class="Oblogout"] fullscreen enable
 for_window [class="octopi"] floating enable
 for_window [title="About Pale Moon"] floating enable
 for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
-for_window [class="qt5ct"] floating enable sticky enable border normal
-for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
-for_window [class="Simple-scan"] floating enable border normal
-for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="Skype"] floating enable border normal
-for_window [class="Timeset-gui"] floating enable border normal
-for_window [class="(?i)virtualbox"] floating enable border normal
+for_window [class="qt5ct"] floating enable sticky enable 
+for_window [class="Qtconfig-qt4"] floating enable sticky enable 
+for_window [class="Simple-scan"] floating enable 
+for_window [class="(?i)System-config-printer.py"] floating enable 
+for_window [class="Skype"] floating enable 
+for_window [class="Timeset-gui"] floating enable 
+for_window [class="(?i)virtualbox"] floating enable 
 for_window [class="Xfburn"] floating enable
 
 # switch to workspace with urgent window automatically
@@ -312,7 +312,7 @@ mode "resize" {
 
         # exit resize mode: Enter or Escape
         bindsym Return mode "default"
-        bindsym Escape mode "default"
+	bindsym Escape mode "default"
 }
 
 # Lock screen
@@ -373,13 +373,17 @@ set_from_resource $term_color15    color15
 ##front_color   #b73838
 ##back_color    #0a0a0a
 
-set $front     #b73838
-set $back      #0a0a0a00
+set $front      #5D5858
+set $back       #17171700
+set $sLine      #DFDFDF
+set $look       #b73838
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-        status_command i3status -c ~/.i3/i3status/config
-	position top
+    status_command i3status -c ~/.i3/i3status/config
+#	status_command i3status 
+#   status_command /usr/bin/i3blocks -c ~/.i3/i3blocks.conf
+	position bottom
 	i3bar_command i3bar --transparency
         
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
@@ -393,16 +397,16 @@ bar {
 
         colors {
                 background  $back
-                statusline  #b73838
+                statusline  $sLine
     
                 separator   $back
 
 #                                  border     backgr.       text
-                focused_workspace  $front     $front        #0a0a0a
-                active_workspace   #353836    #353836       #b73838
-                inactive_workspace $back      $back         #b73838
+                focused_workspace  $back      $back         $sLine
+                active_workspace   $back      $back         $look
+                inactive_workspace $back      $back         $front
                 binding_mode       $back      $back         #dfb4a2
-                urgent_workspace   #8dd140    #8dd140       #0a0a0a
+                urgent_workspace   $back      $back         $look
         }
 }
 
@@ -411,20 +415,20 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #000000 #000000 #FDF6E3
-  client.focused_inactive #212020 #212020 #1ABC9C #454948
-  client.unfocused        #212020 #212020 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #b73838 #000000 
-
-  client.background       #2B2C2B
+#  client.focused          #000000 #000000 #FDF6E3
+#  client.focused_inactive #212020 #212020 #1ABC9C #454948
+#  client.unfocused        #212020 #212020 #1ABC9C #454948
+#  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+#  client.placeholder      #000000 #0c0c0c #b73838 #000000 
+#
+#  client.background       #2B2C2B
 
 #############################
 ### settings for i3-gaps: ###
 #############################
 
 # Set inner/outer gaps
-gaps inner 10
+gaps inner 15
 gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
