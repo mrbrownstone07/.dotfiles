@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="48" width="48" version="1.1" id="svg24">
+    <defs id="defs14">
+        <linearGradient id="b">
+            <stop offset="0" stop-color="#dcdcdc" id="stop2"/>
+            <stop offset="1" stop-color="#252525" id="stop4"/>
+        </linearGradient>
+        <linearGradient xlink:href="#b" id="linearGradient1272" x1="3.927" y1="6.557" x2="44.074" y2="43.371" gradientUnits="userSpaceOnUse"/>
+        <linearGradient xlink:href="#b" id="linearGradient1274" x1="4.13" y1="6.361" x2="45.286" y2="44.802" gradientUnits="userSpaceOnUse"/>
+        <style id="current-color-scheme" type="text/css"/>
+        <style id="current-color-scheme-7" type="text/css"/>
+        <style id="current-color-scheme-8" type="text/css"/>
+        <style id="current-color-scheme-9" type="text/css"/>
+        <style id="current-color-scheme-0" type="text/css"/>
+    </defs>
+    <path id="path16" style="marker:none" d="M45.935 29.424V15.76c0-6.787-.695-7.866-7.5-7.866H21.712l-3.08-3.075h-8.265c-6.798 0-7.494.382-7.494 7.166v17.44" overflow="visible" color="#000" fill="none" stroke="url(#linearGradient1274)" stroke-width="1.8" stroke-opacity="1" stroke-miterlimit="4" stroke-dasharray="none"/>
+    <path id="path18" d="M10.366 20.195c-6.798 0-7.494.695-7.494 7.487v9.64c0 6.788.696 7.488 7.496 7.488H38.44c6.8 0 7.503-.7 7.503-7.488V24.606c0-6.791-.703-7.32-7.503-7.487H22.818l-3.076 3.076z" style="marker:none" overflow="visible" color="#000" fill="none" stroke="url(#linearGradient1272)" stroke-width="1.8" stroke-opacity="1" fill-opacity=".925" stroke-miterlimit="4" stroke-dasharray="none"/>
+    <g transform="matrix(0.9 0 0 0.9 16 22)" id="g18">
+            <defs>
+        <linearGradient id="a">
+            <stop stop-color="#dcdcdc" offset="0"/>
+            <stop stop-color="#252525" offset="1"/>
+        </linearGradient>
+        <linearGradient xlink:href="#a" id="b" x1="6" y1="11" x2="16" y2="11" gradientUnits="userSpaceOnUse"/>
+    </defs>
+    <path d="M17.853 2.29c-1.188-.041-2.307 1.106-3.038 1.62-.876-.266-2.144-.414-3.097-.42a11.755 11.755 0 0 0-3.207.42c-.968-.456-1.928-1.646-3.015-1.594-.617 1.612-.226 2.803-.11 3.098-.727.818-.839 1.865-.839 3.142 0 4.488 2.322 5.492 4.847 5.788-.325.291-.522.81-.626 1.566-.647.301-1.895 1.113-2.91-.675 0 0-.163-1.304-1.305-1.386 0 0-2.478.077-1.446.805 0 0 1.422.147 1.94 1.5 0 0 .538 2.279 3.7 1.57 0 .261.064 2.513.064 2.513l3.392.033 2.584-.116s.365-1.874.365-2.42c0-1.092-.794-3.037-1.202-3.399 2.532-.289 5.008-1.28 5.008-5.779 0-1.278-.08-2.323-.808-3.142.117-.295.507-1.486-.113-3.1 0 0-.06-.018-.184-.024z" fill="url(#b)"/>
+
+    </g>
+</svg>

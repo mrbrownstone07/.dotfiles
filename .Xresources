@@ -114,6 +114,6 @@ UXTerm*toolBar: false
 !-----------------------------------------------------------------
 !ST  
 !---------------------------------------------------------------
-St.font: Liberation Mono:pixelsize=13RR:antialias=true:autohint=true;
+St.font: Liberation Mono:pixelsize=13:antialias=true:autohint=true;
 st.internalBorder: 20px
 *.alpha: 0.80

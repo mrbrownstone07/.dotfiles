@@ -388,6 +388,7 @@ bar {
         
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 	font pango:Inconsolata 10    
+#   font pango:monospace 9
     colors {
         background  $background
         statusline  $sLine
