@@ -170,7 +170,7 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 "  " 
+set $ws1 "  "
 set $ws2 "  " 
 set $ws3 "  " 
 set $ws4 "  " 
@@ -370,44 +370,37 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 
-##front_color   #b73838
-##back_color    #0a0a0a
+##front_color   #5D5858
+##back_color    #171717
 
-set $front      #5D5858
-set $back       #17171700
-set $sLine      #DFDFDF
-set $look       #b73838
+set $front              #5D5858
+set $background         #17171700
+set $sLine              #DFDFDF
+set $look               #b73838
+set $back               #17171700
+set $black              #171717
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
     status_command i3status -c ~/.i3/i3status/config
-#	status_command i3status 
-#   status_command /usr/bin/i3blocks -c ~/.i3/i3blocks.conf
-	position bottom
-	i3bar_command i3bar --transparency
+    position top	
+    i3bar_command i3bar --transparency
         
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
-
-	bindsym button4 nop
-	bindsym button5 nop
-	font pango:Inconsolata 11
-	strip_workspace_numbers yes
-
-        colors {
-                background  $back
-                statusline  $sLine
+	font pango:Inconsolata 10    
+    colors {
+        background  $background
+        statusline  $sLine
     
-                separator   $back
+        separator   $background
 
-#                                  border     backgr.       text
-                focused_workspace  $back      $back         $sLine
-                active_workspace   $back      $back         $look
-                inactive_workspace $back      $back         $front
-                binding_mode       $back      $back         #dfb4a2
-                urgent_workspace   $back      $back         $look
-        }
+#                           border     backgr.       text
+        focused_workspace  $back      $back         $sLine
+        active_workspace   $back      $back         $look
+        inactive_workspace $back      $back         $front
+        binding_mode       $back      $back         #dfb4a2
+        urgent_workspace   $back      $back         $look
+    }
 }
 
 # hide/unhide i3status bar
