@@ -1,0 +1,52 @@
+general {
+        output_format = "i3bar"
+        colors = false
+        markup = pango
+        interval = 1
+}
+
+order += "cpu_usage"
+order += "load"
+order += "disk /"
+order += "wireless wlp2s0"
+order += "volume master"
+order += "tztime local"
+order += "battery 0"
+
+cpu_usage {
+        format = "<span background='#ff5555'>  </span><span
+background='#e5e9f0'> %usage </span>"
+}
+
+load {
+        format = "<span background='#50fa7b'>  </span><span
+background='#e5e9f0'> %5min Load </span>"
+}
+
+
+wireless wlp2s0 {
+        format_up = "<span background='#bd93f9'>  </span><span
+background='#e5e9f0'> %essid - %quality </span>"
+        format_down = "<span background='#bd93f9'> ⬇ </span><span
+background='#e5e9f0'> D </span>"
+}
+
+tztime local {
+        format = "<span background='#8be9fd'>  </span><span
+background='#e5e9f0'> %time </span>"
+        format_time = "%a %-d %b %H:%M"
+}
+
+battery 0 {
+format = "<span background='#8be9fd'> %status </span><span
+background='#e5e9f0'> %percentage </span>"
+# format = " %status %percentage  "
+# format_down = " "
+# last_full_capacity = true
+# integer_battery_capacity = true
+# status_chr = " "
+# status_bat = " "
+# status_full = " "
+# low_threshold = 15
+# threshold_type = time
+# }
