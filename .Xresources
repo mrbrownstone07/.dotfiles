@@ -118,4 +118,4 @@ UXTerm*toolBar: false
 St.font: Liberation Mono:pixelsize=13:antialias=true:autohint=true;
 !St.font: Ubuntu Mono Nerd Font:pixelsize=15;
 st.internalBorder: 20px
-*.alpha: 0.80
+*.alpha: 0.70
