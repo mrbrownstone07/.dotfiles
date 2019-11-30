@@ -1,6 +1,6 @@
 local resetColor="%{$reset_color%}"
 
-local prefix="%{$fg_bold[white]%}>$resetColor%{$fg_bold[magenta]%}>$resetColor%{$fg_bold[blue]%}>$resetColor"
+local prefix="%{$fg_bold[red]%}➜$resetColor"
 local dir="%{$fg_bold[blue]%}%c$resetColor$resetColor"
 local NEWLINE=$'\n\n'
 
