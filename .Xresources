@@ -4,7 +4,7 @@
 
 !special
  *.foreground:   #C7C7C7
- *.background:   #050000
+ *.background:   #080000
  *.cursorColor:  #BA1C33 
 
 ! black
@@ -118,4 +118,4 @@ UXTerm*toolBar: false
 St.font: Liberation Mono:pixelsize=13:antialias=true:autohint=true;
 !St.font: Ubuntu Mono Nerd Font:pixelsize=15;
 st.internalBorder: 20px
-*.alpha: 0.70
+*.alpha: 0.60

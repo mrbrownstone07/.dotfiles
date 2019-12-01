@@ -17,7 +17,7 @@ set $mod Mod4
 new_window none
 new_float none
 
-# Hide borders
+# Hde borders
 hide_edge_borders none
 
 #for_window [class="^.*"] border pixel 1
@@ -269,7 +269,7 @@ for_window [class="Skype"] floating enable
 for_window [class="Timeset-gui"] floating enable 
 for_window [class="(?i)virtualbox"] floating enable 
 for_window [class="Xfburn"] floating enable
-
+#for_window [class="Pcmanfm"] floating enable
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
@@ -343,7 +343,7 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id st
 #exec --no-startup-id lxsession
-
+exec --no-startup-id devilspie
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:

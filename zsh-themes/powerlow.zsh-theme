@@ -111,9 +111,9 @@ prompt_git() {
     dirty=$(parse_git_dirty)
     ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git rev-parse --short HEAD 2> /dev/null)"
     if [[ -n $dirty ]]; then
-      prompt_segment yellow black
+      prompt_segment red black
     else
-      prompt_segment blue black
+      prompt_segment green black
     fi
 
     if [[ -e "${repo_path}/BISECT_LOG" ]]; then
