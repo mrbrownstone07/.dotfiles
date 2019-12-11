@@ -181,7 +181,7 @@ bindsym $mod+Ctrl+Left workspace prev
 set $ws1 ""
 set $ws2 "" 
 set $ws3 ""  
-set $ws4 "" 
+set $ws4 "" 
 set $ws5 "" 
 set $ws6 "" 
 set $ws7 "" 
@@ -337,11 +337,11 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_lua_green
+#exec --no-startup-id start_lua_solarized
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec --no-startup-id st
+exec --no-startup-id st 
 #exec --no-startup-id lxsession
 exec --no-startup-id devilspie
 
@@ -391,7 +391,7 @@ set_from_resource $term_color15    color15
 #############################
 
 # Set inner/outer gaps
-gaps inner 15
+gaps inner 10
 gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.

@@ -1,13 +1,13 @@
 local resetColor="%{$reset_color%}"
 
 local prefix="%{$fg_bold[red]%}➜$resetColor"
-local dir="%{$fg_bold[blue]%}%c$resetColor$resetColor"
+local dir="%{$fg_bold[red]%}%c$resetColor$resetColor"
 local NEWLINE=$'\n\n'
 
-PROMPT='[$dir] '
+#PROMPT='[$dir] '
 RPROMPT='$(git_prompt_info)'
 
-#PROMPT='%{$fg_bold[blue]%}$prefix $(ssh_connection)$dir $(git_prompt_info)'
+PROMPT='$dir $prefix '
 MODE_INDICATOR="%{$fg_bold[green]%}%{$bg[red]%} NORMAL %{$reset_color%}"
 
 function ssh_connection() {
