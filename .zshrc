@@ -11,8 +11,8 @@ export ZSH="/home/mrbrownstone/.oh-my-zsh"
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="test"
 #ZSH_THEME="avit"
-#ZSH_THEME="madcap"
-ZSH_THEME="powerlow"
+ZSH_THEME="madcap"
+#ZSH_THEME="powerlow"
 
 
 # Set list of themes to pick from when loading at random

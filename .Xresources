@@ -3,29 +3,71 @@
 !-----------------------------------------------------------------------------
 
 !special
-*.foreground:   #C7C7C7
-*.background:   #060211
+*.foreground:   #BFDC89
+*.background:   #030404
 *.cursorColor:  #BA1C33 
 
-*.color0       #060211
-*.color8       #858e7d
-*.color1       #9e2626
-*.color9       #9e2626
-*.color2       #d63131
-*.color10      #d63131
-*.color3       #428568
-*.color11      #428568
-*.color4       #619369
-*.color12      #619369
-*.color5       #B1A244
-*.color13      #B1A244
-*.color6       #9e2626
-*.color14      #9e2626
-*.color7       #bfcbb3
-*.color15      #bfcbb3
 
+!--------------------------------------------------------------------
 !
+!   my theme -2
 !
+!--------------------------------------------------------------------
+
+!! black
+!*.color0:       #282a2e
+!*.color8:       #373b41
+!
+!! red
+!*.color1:       #922230
+!*.color9:       #923a45
+!
+!! green
+!*.color2:       #0f8c61
+!*.color10:      #198873
+!
+!! yellow
+!*.color3:       #ba883d
+!*.color11:      #ba9153
+!
+!! blue
+!*.color4:       #277896
+!*.color12:      #3c7e96
+!
+!! magenta
+!*.color5:       #4b4574
+!*.color13:      #53569b
+!
+!! cyan
+!*.color6:       #638b83
+!*.color14:      #7dbfb8
+!
+!! white
+!*.color7:       #cdcdcd
+!*.color15:      #cdcdcd
+
+!--------------------------------------------------------------------
+!
+!   my theme -1
+!
+!--------------------------------------------------------------------
+
+*.color0:     #000000
+*.color8:     #4D4D4D
+*.color1:     #FF5555
+*.color9:     #FF6E67
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+*.color3:     #F1FA8C
+*.color11:    #0CB07D
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6
 
 !--------------------------------------------------------------------
 !
@@ -77,5 +119,5 @@ URxvt.cursorColor:  #31e62b
 St.font: Liberation Mono:pixelsize=13:antialias=true:autohint=true;
 !St.font: Ubuntu Mono Nerd Font:pixelsize=15;
 st.internalBorder: 20px
-*.alpha: 0.70
+*.alpha: 0.75
 st.borderpx: 5

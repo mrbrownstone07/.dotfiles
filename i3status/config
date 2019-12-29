@@ -8,6 +8,7 @@ color_bad = "#E74C3C"
 
 order += "cpu_usage"
 order += "load"
+order += "memory"
 #order += "disk /"
 #order += "disk /home"
 #order += "wireless wlp2s0"
@@ -19,6 +20,10 @@ order += "battery 0"
 
 cpu_usage {
 format = " %usage"
+}
+
+memory{
+format = " %used/%total"
 }
 
 load {

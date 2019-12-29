@@ -14,8 +14,8 @@ set $mod Mod4
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 # workspace_layout stacking
-new_window none
-new_float none
+new_window pixel 2
+new_float pixel 2
 
 # Hde borders
 hide_edge_borders none
@@ -241,6 +241,7 @@ assign [class="Thunar"] $ws6
 assign [class="dolphin"] $ws6
 
 assign [class="vlc"] $ws8
+assign [class="mpv"] $ws8
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable 
@@ -259,7 +260,7 @@ for_window [title="MuseScore: Play Panel"] floating enable
 for_window [class="Oblogout"] fullscreen enable
 for_window [class="octopi"] floating enable
 for_window [title="About Pale Moon"] floating enable
-for_window [class="Pamac-manager"] floating enable
+#for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable 
 for_window [class="Qtconfig-qt4"] floating enable sticky enable 
@@ -337,13 +338,13 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-#exec --no-startup-id start_lua_solarized
+#exec --no-startup-id start_lua_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id st 
 #exec --no-startup-id lxsession
-exec --no-startup-id devilspie
+#exec --no-startup-id devilspie
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -377,8 +378,8 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 # Theme colors
-# class                   border  backgr. text    indic.   child_border
-  client.focused          #C52929 #000000 #FDF6E3
+# class                    border  backgr. text    indic.   child_border
+   client.focused          #C52929 #B55B64 #FDF6E3
 #  client.focused_inactive #212020 #212020 #1ABC9C #454948
 #  client.unfocused        #212020 #212020 #1ABC9C #454948
 #  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
@@ -391,8 +392,8 @@ set_from_resource $term_color15    color15
 #############################
 
 # Set inner/outer gaps
-gaps inner 10
-gaps outer 0
+gaps inner 5
+gaps outer 6
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -404,7 +405,7 @@ gaps outer 0
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
+#smart_borders on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
