@@ -4,7 +4,7 @@
 
 !special
 *.foreground:   #BFDC89
-*.background:   #030404
+*.background:   #000000
 *.cursorColor:  #BA1C33 
 
 
@@ -69,6 +69,26 @@
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
 
+
+!nord theme
+
+!*.color0:       #FCB6B6
+!*.color8:       #FCB6B6
+!*.color1:       #FF405B
+!*.color9:       #FF405B
+!*.color2:       #D0324C
+!*.color10:      #D0324C
+!*.color3:       #FEBB21
+!*.color11:      #FEBB21
+!*.color4:       #005255
+!*.color12:      #005255
+!*.color5:       #B444B4
+!*.color13:      #B444B4
+!*.color6:       #005255
+!*.color14:      #005255
+!*.color7:       #FF385A
+!*.color15:      #FF385A
+
 !--------------------------------------------------------------------
 !
 !   URxvt
@@ -79,7 +99,7 @@ URxvt*saveline: 15000
 URxvt*termName: rxvt-256color
 URxvt*iso14755: false
 URxvt*depth: 32
-URxvt*background: [70]#000000
+URxvt*background: [90]#000000
 URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 URxvt*internalBorder: 20
@@ -119,5 +139,5 @@ URxvt.cursorColor:  #31e62b
 St.font: Liberation Mono:pixelsize=13:antialias=true:autohint=true;
 !St.font: Ubuntu Mono Nerd Font:pixelsize=15;
 st.internalBorder: 20px
-*.alpha: 0.75
+*.alpha: .90
 st.borderpx: 5
