@@ -42,7 +42,7 @@ bindsym $mod+Return exec --no-startup-id st
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec "dmenu_run -nf '#DFDFDF' -nb '#171717' -sb '#5D5858' -sf '#DFDFDF' -fn 'Inconsolata-11'"
+bindsym $mod+d exec "dmenu_run -nf '#E99280' -nb '#000000' -sb '#E99280' -sf '#000000' -fn 'Inconsolata-10'"
 
 #launch surf
 bindsym Ctrl+Shift+s exec tabbed surf -Pe
