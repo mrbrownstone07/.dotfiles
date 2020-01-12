@@ -1,0 +1,182 @@
+@import "variables.css";
+
+/* TOOLBAR */
+
+/* Move navbar above tabs */
+#nav-bar {
+    -moz-box-ordinal-group: 1 !important;
+}
+#PersonalToolbar {
+    -moz-box-ordinal-group: 2 !important;
+}
+#titlebar {
+    -moz-box-ordinal-group: 3 !important;
+}
+
+/* Set background color of navbar */
+#nav-bar-customization-target {
+    background-color: var(--custom-background) !important;
+}
+
+/* Set colors, border, and font-weight of urlbar */
+#urlbar {
+    background: none !important;
+    color: var(--custom-foreground) !important;
+    border: none !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+}
+
+/* Remove border in urlbar */
+#identity-box, #urlbar-label-box {
+    border: none !important;
+}
+
+/* Hide seperator in toolbar next to menu button */
+:root:not([chromehidden~="toolbar"]) #PanelUI-button {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* Set colors of toolbar buttons */
+.toolbarbutton-1 {
+    fill: var(--custom-foreground) !important;
+    background-color: var(--custom-background) !important;
+}
+
+/* Remove background of toolbar buttons */
+.urlbar-icon,
+.urlbar-icon-wrapper,
+#tabbrowser-tabs toolbarbutton,
+toolbar toolbarbutton > .toolbarbutton-icon,
+toolbar toolbarbutton > .toolbarbutton-badge-stack,
+.titlebar-button,
+#identity-box,
+#tracking-protection-icon-container,
+.findbar-textbox~toolbarbutton,
+toolbarbutton.scrollbutton-up,
+toolbarbutton.scrollbutton-down {
+    background-color: transparent !important;
+}
+
+/* Set color of toolbar icons to grayscale */
+.webextension-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+    filter: grayscale(100%) !important;
+}
+.toolbarbutton-badge {
+    background-color: #444 !important;
+}
+
+/* Hide tracking protection button */
+#tracking-protection-icon-container {
+    display: none !important;
+}
+
+
+/* TABS */
+
+/* Set background color of tabbar */
+#tabbrowser-tabs {
+    background-color: var(--custom-background) !important;
+}
+
+/* Set tab colors */
+tab {
+    background-color: var(--custom-background) !important;
+    color: var(--custom-foreground) !important;
+}
+
+/* Set colors and font-weight of selected tabs */
+.tab-content[selected="true"] {
+    background-color: var(--custom-background) !important;
+    color: var(--custom-foreground) !important;
+    font-weight: 500 !important;
+}
+
+/* Set opacity of tabs */
+.tabbrowser-tab { opacity: 0.65; }
+.tabbrowser-tab:hover { opacity: 0.9; }
+.tabbrowser-tab[selected] { opacity: 1; }
+
+/* Remove background of tabs when hovering */
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected]) {
+    background-color: transparent !important
+}
+
+/* Reduce fade size in tabs with text overflow */
+.tab-label-container[textoverflow][labeldirection="ltr"]:not([pinned]),
+.tab-label-container[textoverflow]:not([labeldirection]):not([pinned]):-moz-locale-dir(ltr) {
+    mask-image: linear-gradient(to left, transparent, black 1em) !important;
+}
+
+/* Hacky way to make the url input bar centered */
+input#urlbar-input {
+    text-align: center !important;
+}
+
+/* Remove borders from tabs */
+.tabbrowser-tab::before,
+.tabbrowser-tab::after {
+    display: none !important;
+}
+
+/* Remove line over tabs */
+.tab-line {
+    display: none !important;
+}
+
+
+/* POPUP & DROPDOWN MENUS */
+
+/* Set color and z-index of url bar dropdown */
+.urlbarView:not(.megabar) {
+    background-color: var(--custom-background-menu) !important;
+    z-index: 10 !important;
+}
+
+/* Set color of popup menus */
+panelview {
+    background: var(--custom-background-menu) !important;
+}
+
+/* Set border and margin of popup menus */
+box.panel-arrowcontent {
+    border: var(--custom-border) !important;
+    margin: 0 !important;
+    margin-top: 10px !important;
+}
+
+/* Remove arrow from popup menus */
+box.panel-arrowbox {
+    display: none !important;
+}
+
+/* Fix background of extension buttons in overflow menu */
+panel .toolbarbutton-1.webextension-browser-action {
+    background-color: transparent !important;
+}
+
+
+/* OTHER */
+
+/* Set content background */
+#browser vbox#appcontent tabbrowser,
+#content,
+#tabbrowser-tabpanels,
+browser[type=content-primary],
+browser[type=content] > html {
+    background: var(--custom-background) !important;
+}
+
+
+#back-button {
+    list-style-image: url("left-arrow.png") !important;
+    margin-left: var(--margin-before-back-button) !important;
+    opacity: 1 !important;
+}
+ 
+#forward-button {
+    list-style-image: url("right-arrow.png") !important;
+    opacity: 1 !important;
+}

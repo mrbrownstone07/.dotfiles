@@ -14,8 +14,8 @@ set $mod Mod4
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 # workspace_layout stacking
-new_window none
-new_float none
+new_window pixel 1
+new_float pixel 1
 
 # Hde borders
 hide_edge_borders none
@@ -42,7 +42,7 @@ bindsym $mod+Return exec --no-startup-id st
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec "dmenu_run -nf '#E99280' -nb '#000000' -sb '#E99280' -sf '#000000' -fn 'Inconsolata-10'"
+bindsym $mod+d exec "dmenu_run -nf '#B9AB8D' -nb '#1D2021' -sb '#B9AB8D' -sf '#1D2021' -fn 'Inconsolata-10'"
 
 #launch surf
 bindsym Ctrl+Shift+s exec tabbed surf -Pe
@@ -178,6 +178,7 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
+
 set $ws1 ""
 set $ws2 "" 
 set $ws3 ""  
@@ -186,7 +187,7 @@ set $ws5 ""
 set $ws6 "" 
 set $ws7 "" 
 set $ws8 "" 
-
+ 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -380,8 +381,8 @@ set_from_resource $term_color15    color15
 # Theme colors
 # class                    border  backgr. text    indic.   child_border
    client.focused          #D2D2D2 #E99280 #FDF6E3
-   client.focused_inactive #656565 #5F5F5F #1ABC9C #454948
-   client.unfocused        #656565 #5F5F5F #1ABC9C #454948
+   client.focused_inactive #B9AB8D #B9AB8D #1ABC9C #454948
+   client.unfocused        #B9AB8D #B9AB8D #1ABC9C #454948
 #  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
 #  client.placeholder      #000000 #0c0c0c #b73838 #000000 
 #

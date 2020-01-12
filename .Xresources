@@ -1,50 +1,9 @@
-!-----------------------------------------------------------------------------
-! Terminal Color Scheme
-!-----------------------------------------------------------------------------
-
-!special
-*.foreground:   #BFDC89
-*.background:   #000000
-*.cursorColor:  #BA1C33 
-
-
-!--------------------------------------------------------------------
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! 
+! Xresources file
+! Mahdi Mohammad Shibli
 !
-!   my theme -2
-!
-!--------------------------------------------------------------------
-
-!! black
-!*.color0:       #282a2e
-!*.color8:       #373b41
-!
-!! red
-!*.color1:       #922230
-!*.color9:       #923a45
-!
-!! green
-!*.color2:       #0f8c61
-!*.color10:      #198873
-!
-!! yellow
-!*.color3:       #ba883d
-!*.color11:      #ba9153
-!
-!! blue
-!*.color4:       #277896
-!*.color12:      #3c7e96
-!
-!! magenta
-!*.color5:       #4b4574
-!*.color13:      #53569b
-!
-!! cyan
-!*.color6:       #638b83
-!*.color14:      #7dbfb8
-!
-!! white
-!*.color7:       #cdcdcd
-!*.color15:      #cdcdcd
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !--------------------------------------------------------------------
 !
@@ -52,84 +11,90 @@
 !
 !--------------------------------------------------------------------
 
-*.color0:     #000000
-*.color8:     #4D4D4D
-*.color1:     #FF5555
-*.color9:     #FF6E67
-*.color2:     #50FA7B
-*.color10:    #5AF78E
-*.color3:     #F1FA8C
-*.color11:    #0CB07D
-*.color4:     #BD93F9
-*.color12:    #CAA9FA
-*.color5:     #FF79C6
-*.color13:    #FF92D0
-*.color6:     #8BE9FD
-*.color14:    #9AEDFE
-*.color7:     #BFBFBF
-*.color15:    #E6E6E6
-
-
-!nord theme
-
-!*.color0:       #FCB6B6
-!*.color8:       #FCB6B6
-!*.color1:       #FF405B
-!*.color9:       #FF405B
-!*.color2:       #D0324C
-!*.color10:      #D0324C
-!*.color3:       #FEBB21
-!*.color11:      #FEBB21
-!*.color4:       #005255
-!*.color12:      #005255
-!*.color5:       #B444B4
-!*.color13:      #B444B4
-!*.color6:       #005255
-!*.color14:      #005255
-!*.color7:       #FF385A
-!*.color15:      #FF385A
+!special
+!*.foreground:   #BFDC89
+!*.background:   #000000
+!*.cursorColor:  #BA1C33 
+!
+!*.color0:     #000000
+!*.color8:     #4D4D4D
+!*.color1:     #FF5555
+!*.color9:     #FF6E67
+!*.color2:     #50FA7B
+!*.color10:    #5AF78E
+!*.color3:     #F1FA8C
+!*.color11:    #0CB07D
+!*.color4:     #BD93F9
+!*.color12:    #CAA9FA
+!*.color5:     #FF79C6
+!*.color13:    #FF92D0
+!*.color6:     #8BE9FD
+!*.color14:    #9AEDFE
+!*.color7:     #BFBFBF
+!*.color15:    #E6E6E6
 
 !--------------------------------------------------------------------
 !
-!   URxvt
+!   gruv-box
 !
 !--------------------------------------------------------------------
 
-URxvt*saveline: 15000
-URxvt*termName: rxvt-256color
-URxvt*iso14755: false
-URxvt*depth: 32
-URxvt*background: [90]#000000
-URxvt*scrollBar: false
-URxvt*scrollBar_right: false
-URxvt*internalBorder: 20
-URxvt*externalBorder: 0
-URxvt*letterSpace: 0
-!URxvt.font: xft:DejaVu Sans Mono:autohint=true:size=9,xft:Inconsolata\ for\ Powerline:autohint=true:size=9
-!URxvt.font: 9x15,xft:TerminessTTFNerdFontMono
-!URxvt.font: Monospace 13
-!URxvt.font: 9x15,xft:TerminessTTFNerdFontMono, Powerline:autohint=true:size=9
-URxvt.font: xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true\ , Powerline:size=12
-!urxvt*font: xft:Terminus:pixelsize=12,xft:Inconsolata\ for\ Powerline:pixelsize=12
-!URxvt*font: xft:Terminess Powerline:size=12
+!main
 
-!URxvt*font: DejaVu Sans Mono Book:size=12:antialias=false
+*background: #1d2021
+*foreground: #ebdbb2
+*cursor:     #CD68D3
 
-URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
-URxvt.copyCommand: xclip -i -selection clipboard
-URxvt.pasteCommand: xclip -o -selection clipboard
-URxvt.keysym.m-c: perl:clipboard:copy
-URxvt.keysym.m-v: perl:clipboard:paste
-URxvt.urlLauncher: exo-open
-URxvt.underlineURLs: true
-URxvt.urlButton: 1
-URxvt.geometry: 90x30
-URxvt.tabbed.tabbar-fg: 4
-URxvt.tabbed.tabbar-bg: 16
-URxvt.tabbed.tab-fg: 15
-URxvt.tabbed.tab-bg: 4
-URxvt*buffered: false
-URxvt.cursorColor:  #31e62b 
+*color0:  #282828
+*color8:  #928374
+*color1:  #cc241d
+*color9:  #fb4934
+*color2:  #98971a
+*color10: #b8bb26
+*color3:  #d79921
+*color11: #fabd2f
+*color4:  #458588
+*color12: #83a598
+*color5:  #b16286
+*color13: #d3869b
+*color6:  #689d6a
+*color14: #8ec07c
+*color7:  #a89984
+*color15: #ebdbb2
+
+
+!additonal scheme
+
+!*.color24:  #076678
+!*.color66:  #427b58
+!*.color88:  #9d0006
+!*.color96:  #8f3f71
+!*.color100: #79740e
+!*.color108: #8ec07c
+!*.color109: #83a598
+!*.color130: #af3a03
+!*.color136: #b57614
+!*.color142: #b8bb26
+!*.color167: #fb4934
+!*.color175: #d3869b
+!*.color208: #fe8019
+!*.color214: #fabd2f
+!*.color223: #ebdbb2
+!*.color228: #f2e5bc
+!*.color229: #fbf1c7
+!*.color230: #f9f5d7
+!*.color234: #1d2021
+!*.color235: #282828
+!*.color236: #32302f
+!*.color237: #3c3836
+!*.color239: #504945
+!*.color241: #665c54
+!*.color243: #7c6f64
+!*.color244: #928374
+!*.color245: #928374
+!*.color246: #a89984
+!*.color248: #bdae93
+!*.color250: #d5c4a1
 
 !-------------------------------------------------------------------
 !
@@ -139,5 +104,5 @@ URxvt.cursorColor:  #31e62b
 St.font: Liberation Mono:pixelsize=13:antialias=true:autohint=true;
 !St.font: Ubuntu Mono Nerd Font:pixelsize=15;
 st.internalBorder: 20px
-*.alpha: .90
+*.alpha: 0.90
 st.borderpx: 5

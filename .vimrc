@@ -1,3 +1,6 @@
+" run time paths
+set runtimepath+=~/.vim/pack/plugins/start
+
 " Don't try to be vi compatible
 set nocompatible
 
@@ -18,17 +21,25 @@ filetype plugin indent on
 " Security
 set modelines=0
 
-" Show line numbers
-"set number
-
 " hybrid line number
 set number relativenumber
 
 augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 augroup END
+
+" highlight active line number
+"set cursorline
+"hi cursorline cterm=none term=none
+"autocmd WinEnter * setlocal cursorline
+"autocmd WinLeave * setlocal nocursorline
+"highlight CursorLine guibg=#303000 ctermbg=234
+
+" make the color of highlight transparent
 
 " Show file stats
 set ruler
@@ -89,6 +100,20 @@ inoremap <F1> <ESC>:set invfullscreen<CR>a
 nnoremap <F1> :set invfullscreen<CR>
 vnoremap <F1> :set invfullscreen<CR>
 
+" nerdtree keymap
+map <C-n> :NERDTreeToggle<CR>
+
+" nerd tree settings
+let g:NERDTreeFileExtensionHighlightFullName=1
+let g:NERDTreeExactMatchHighlightFullName=1
+let g:NERDTreePatternMatchHighlightFullName=1
+let g:WebDevIconsUnicodeDecorateFolderNodes=1
+let g:NERDTreeGitStatusNodeColorization=1
+let NERDTreeShowHidden=1
+
+" indent line settings
+let g:indentLine_char='|'
+
 " Textmate holdouts
 
 " Formatting
@@ -104,7 +129,12 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 " Color scheme (terminal)
 set t_Co=256
 set background=dark
-" set termguicolors
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-" colorscheme gruvbox
+
+"gruv box color scheme
+let g:gruvbox_invert_indent_guides=1
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
+hi Normal guibg=NONE ctermbg=NONE
+
+"light line color scheme
+let g:lightline = {'colorscheme': 'wombat'}

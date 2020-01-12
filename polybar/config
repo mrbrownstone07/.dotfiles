@@ -44,18 +44,31 @@ format-offset =
 [colors]
 
 ; Madcap theme ==========
-special = #E99280
-background = #D8000000
-foreground = #DFDFDF
-alert = #d26937
-icon = #E99280
-label = #E99280
-volume-min = #2aa889
-volume-med = #edb443
-volume-max = #c23127
+;special = #E99280
+;background = #D8000000
+;foreground = #DFDFDF
+;alert = #d26937
+;icon = #E99280
+;label = #E99280
+;volume-min = #2aa889
+;volume-med = #edb443
+;volume-max = #c23127
 ; =======================
 
+;gruvbox theme =========
+background  = #1D2021
+foreground  = #B9AB8D
+alert       = #d26937
 
+special     = #E99280 
+icon        = #E99280
+label       = #E99280
+
+volume-min  = #2aa889
+volume-med  = #edb443
+volume-max  = #c23127
+
+: ======================
 ################################################################################
 ################################################################################
 ############                         MAINBAR-I3                     ############
