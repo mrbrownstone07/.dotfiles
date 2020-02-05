@@ -8,7 +8,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window none
+new_window pixel 1
 new_float none
 
 # Hide borders
@@ -28,7 +28,7 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec --no-startup-id st
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -374,17 +374,17 @@ set_from_resource $term_color15    color15
 ##back_color    #171717
 
 set $front              #5D5858
-set $background         #44444410
-set $sLine              #ffffff
+set $background         #1D2021
+set $sLine              #EBDBB2
 set $look               #b73838
-set $back               #17171700
-set $black              #171717
+set $back               #1D2021
+set $black              #1D2021
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-   status_command i3status -c ~/.i3/i3status/config
+   status_command i3status
     position top	
-    i3bar_command i3bar --transparency
+    i3bar_command i3bar
         
     font pango:  Monospace 8
     colors {
@@ -394,9 +394,9 @@ bar {
         separator   $background
 
 #                           border     backgr.       text
-        focused_workspace  #E27878    #E27878       $black
-        active_workspace   #B4BE82    #B4BE82       $black
-        inactive_workspace #89B8C2    #89B8C2       $black
+        focused_workspace  #B8BB26    #B8BB26       $black
+        active_workspace   $back      $back         #B8BB26
+        inactive_workspace $back      $back         #B8BB26
         binding_mode       $back      $back         #dfb4a2
         urgent_workspace   $back      $back         $look
     }
@@ -406,10 +406,10 @@ bar {
 bindsym $mod+m bar mode toggle
 
 # Theme colors
-# class                   border  backgr. text    indic.   child_border
-#  client.focused          #000000 #000000 #FDF6E3
+#   class                   border  backgr. text    indic.   child_border
+    client.focused          #000000 #B8BB26  #FDF6E3
 #  client.focused_inactive #212020 #212020 #1ABC9C #454948
-#  client.unfocused        #212020 #212020 #1ABC9C #454948
+#  client.unfocused        #212020 #E99280 # #454948
 #  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
 #  client.placeholder      #000000 #0c0c0c #b73838 #000000 
 #
@@ -420,7 +420,7 @@ bindsym $mod+m bar mode toggle
 #############################
 
 # Set inner/outer gaps
-gaps inner 5
+gaps inner 8
 gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.

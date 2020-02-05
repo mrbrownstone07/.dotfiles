@@ -137,4 +137,5 @@ colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
 
 "light line color scheme
-let g:lightline = {'colorscheme': 'wombat'}
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'
