@@ -41,26 +41,26 @@
 
 !main
 
-*background: #1d2021
-*foreground: #ebdbb2
-*cursor:     #CD68D3
+!*background: #1d2021
+!*foreground: #ebdbb2
+!*cursor:     #CD68D3
 
-*color0:  #282828
-*color8:  #928374
-*color1:  #cc241d
-*color9:  #fb4934
-*color2:  #98971a
-*color10: #b8bb26
-*color3:  #d79921
-*color11: #fabd2f
-*color4:  #458588
-*color12: #83a598
-*color5:  #b16286
-*color13: #d3869b
-*color6:  #689d6a
-*color14: #8ec07c
-*color7:  #a89984
-*color15: #ebdbb2
+!*color0:  #282828
+!*color8:  #928374
+!*color1:  #cc241d
+!*color9:  #fb4934
+!*color2:  #98971a
+!*color10: #b8bb26
+!*color3:  #d79921
+!*color11: #fabd2f
+!*color4:  #458588
+!*color12: #83a598
+!*color5:  #b16286
+!*color13: #d3869b
+!*color6:  #689d6a
+!*color14: #8ec07c
+!*color7:  #a89984
+!*color15: #ebdbb2
 
 
 !additonal scheme
@@ -96,6 +96,47 @@
 !*.color248: #bdae93
 !*.color250: #d5c4a1
 
+
+!sweet-dark
+
+! special
+*.foreground:   #c3c7d1
+*.background:   #161925
+*.cursorColor:  #c3c7d1
+
+! black
+*.color0:       #282c34
+*.color8:       #282c34
+
+! red
+*.color1:       #ed254e
+*.color9:       #ed254e
+
+! green
+*.color2:       #71f79f
+*.color10:      #71f79f
+
+! yellow
+URxvt*color3:       #f9dc5c
+URxvt*color11:      #f9dc5c
+
+! blue
+*.color4:       #7cb7e1
+*.color12:      #7cb7e1
+
+! magenta
+*.color5:       #c74ded
+*.color13:      #c74ded
+
+! cyan
+*.color6:       #00c1e4
+*.color14:      #00c1e4
+
+! white
+*.color7:       #dcdfe4
+*.color15:      #dcdfe4
+
+
 !-------------------------------------------------------------------
 !
 !   ST
@@ -104,5 +145,5 @@
 St.font: Liberation Mono:pixelsize=13:antialias=true:autohint=true;
 !St.font: Ubuntu Mono Nerd Font:pixelsize=15;
 st.internalBorder: 20px
-*.alpha: 0.90
-st.borderpx: 5
+*.alpha: 1.0
+st.borderpx: 10

@@ -34,7 +34,7 @@ bindsym $mod+Return exec --no-startup-id st
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec "dmenu_run -nf '#DFDFDF' -nb '#171717' -sb '#5D5858' -sf '#DFDFDF' -fn 'Inconsolata-11'"
+bindsym $mod+d exec "dmenu_run -nf '#EBDBB2' -nb '#1D2021' -sb '#B8BB26' -sf '#1D2021' -fn 'Inconsolata-11'"
 
 #launch surf
 bindsym Ctrl+Shift+s exec tabbed surf -Pe
@@ -170,14 +170,14 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 "  "
-set $ws2 "  " 
-set $ws3 "  " 
-set $ws4 "  " 
-set $ws5 "  " 
-set $ws6 "  " 
-set $ws7 "  " 
-set $ws8 "  " 
+set $ws1 "1"
+set $ws2 "2" 
+set $ws3 "3" 
+set $ws4 "4" 
+set $ws5 "5" 
+set $ws6 "6" 
+set $ws7 "7" 
+set $ws8 "8" 
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -233,6 +233,7 @@ assign [class="Thunar"] $ws6
 assign [class="dolphin"] $ws6
 
 assign [class="vlc"] $ws8
+assign [class="mpv"] $ws8
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable 
@@ -370,44 +371,16 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 
-##front_color   #5D5858
-##back_color    #171717
+#polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-set $front              #5D5858
-set $background         #1D2021
-set $sLine              #EBDBB2
-set $look               #b73838
-set $back               #1D2021
-set $black              #1D2021
-
-# Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-   status_command i3status
-    position top	
-    i3bar_command i3bar
-        
-    font pango:  Monospace 8
-    colors {
-        background  $background
-        statusline  $sLine
-    
-        separator   $background
-
-#                           border     backgr.       text
-        focused_workspace  #B8BB26    #B8BB26       $black
-        active_workspace   $back      $back         #B8BB26
-        inactive_workspace $back      $back         #B8BB26
-        binding_mode       $back      $back         #dfb4a2
-        urgent_workspace   $back      $back         $look
-    }
-}
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
 # Theme colors
 #   class                   border  backgr. text    indic.   child_border
-    client.focused          #000000 #B8BB26  #FDF6E3
+    client.focused          #000000 #C50ED2  #FDF6E3
 #  client.focused_inactive #212020 #212020 #1ABC9C #454948
 #  client.unfocused        #212020 #E99280 # #454948
 #  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
@@ -420,7 +393,7 @@ bindsym $mod+m bar mode toggle
 #############################
 
 # Set inner/outer gaps
-gaps inner 8
+gaps inner 15
 gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.

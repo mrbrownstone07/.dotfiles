@@ -127,13 +127,13 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Color scheme (terminal)
-set t_Co=256
+"let g:onedark_termcolors=256
 set background=dark
 
 "gruv box color scheme
-let g:gruvbox_invert_indent_guides=1
-let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
+"let g:gruvbox_invert_indent_guides=1
+"let g:gruvbox_contrast_dark='hard'
+colorscheme darkocean
 hi Normal guibg=NONE ctermbg=NONE
 
 "light line color scheme
