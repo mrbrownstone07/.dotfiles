@@ -41,7 +41,7 @@
 
 !main
 
-!*background: #1d2021
+!*background: #0C0C0D
 !*foreground: #ebdbb2
 !*cursor:     #CD68D3
 
@@ -100,41 +100,94 @@
 !sweet-dark
 
 ! special
-*.foreground:   #c3c7d1
-*.background:   #161925
-*.cursorColor:  #c3c7d1
+!*.foreground:   #c3c7d1
+!*.background:   #161925
+!*.cursorColor:  #c3c7d1
 
 ! black
-*.color0:       #282c34
-*.color8:       #282c34
+!*.color0:       #282c34
+!*.color8:       #282c34
 
 ! red
-*.color1:       #ed254e
-*.color9:       #ed254e
+!*.color1:       #ed254e
+!*.color9:       #ed254e
 
 ! green
-*.color2:       #71f79f
-*.color10:      #71f79f
+!*.color2:       #71f79f
+!*.color10:      #71f79f
 
 ! yellow
-URxvt*color3:       #f9dc5c
-URxvt*color11:      #f9dc5c
+!*color3:       #f9dc5c
+!*color11:      #f9dc5c
 
 ! blue
-*.color4:       #7cb7e1
-*.color12:      #7cb7e1
+!*.color4:       #7cb7e1
+!*.color12:      #7cb7e1
 
 ! magenta
-*.color5:       #c74ded
-*.color13:      #c74ded
+!*.color5:       #c74ded
+!*.color13:      #c74ded
 
 ! cyan
-*.color6:       #00c1e4
-*.color14:      #00c1e4
+!*.color6:       #00c1e4
+!*.color14:      #00c1e4
 
 ! white
-*.color7:       #dcdfe4
-*.color15:      #dcdfe4
+!*.color7:       #dcdfe4
+!*.color15:      #dcdfe4
+
+
+!----------------------------------------------------------
+!
+!   ayu - dark
+!
+!----------------------------------------------------------
+
+
+! Special
+
+*.foreground:   #b3b1ad
+*.background:   #0a0e14
+*.cursorColor:  #e6b450
+!*.color0:       #0a0e14
+!*.color8:       #1f2430
+*.color1:       #ff3333
+*.color9:       #ff3333
+*.color2:       #c2d94c
+*.color10:      #bae67e
+*.color3:       #ffb454
+*.color11:      #ffd580
+*.color4:       #59c2ff
+*.color12:      #73d0ff
+*.color5:       #f07178
+*.color13:      #f28779
+*.color6:       #95e6cb
+*.color14:      #95e6cb
+*.color7:       #ffffff
+*.color15:      #ffffff
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
+!
+!   custom shceme
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+*.color0:       #696f61
+*.color8:       #8c7a7a
+!*.color1:       #e84f4f
+!*.color9:       #d23d3d
+!*.color2:       #b8d68c
+!*.color10:      #a0cf5d
+!*.color3:       #e1aa5d
+!*.color11:      #f39d21
+!*.color4:       #7dc1cf
+!*.color12:      #4e9fb1
+!*.color5:       #9b64fb
+!*.color13:      #8542ff
+!*.color6:       #6d878d
+!*.color14:      #42717b
+!*.color7:       #dddddd
+!*.color15:      #dddddd
 
 
 !-------------------------------------------------------------------
@@ -142,8 +195,9 @@ URxvt*color11:      #f9dc5c
 !   ST
 !
 !--------------------------------------------------------------------
-St.font: Liberation Mono:pixelsize=13:antialias=true:autohint=true;
+!St.font: Liberation Mono:pixelsize=13:antialias=true:autohint=true;
 !St.font: Ubuntu Mono Nerd Font:pixelsize=15;
+St.font: Lucida Console:pixelsize=13;
 st.internalBorder: 20px
-*.alpha: 1.0
+*.alpha: .85
 st.borderpx: 10

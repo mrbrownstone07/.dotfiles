@@ -1,6 +1,6 @@
 [global]
     frame_width = 1
-    frame_color = "#B8BB26"
+    frame_color = "#9ABDBD"
     
     font = Noto Sans 10
     
@@ -40,7 +40,7 @@
     # window allows bounces back and forth.
     # This option conflicts with "word_wrap".
     # Set to 0 to disable.
-    bounce_freq = 5
+    # bounce_freq = 5
 
     
     # Show age of message if message is older than show_age_threshold
@@ -50,7 +50,7 @@
     
     # Split notifications into multiple lines if they don't fit into
     # geometry.
-    word_wrap = no
+    word_wrap = yes
     
     # Ignore newlines '\n' in notifications.
     ignore_newline = no
@@ -68,16 +68,16 @@
     # the top and down respectevly.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "0x4-25+25"
+    geometry = "0x0-30+20"
     
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
-    shrink = yes
+    shrink = no
     
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing windowmanager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 15
+    #transparency = 15
     
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
@@ -134,7 +134,7 @@
     #  * foreground: use the same color as the foreground;
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
-    separator_color = #263238
+    separator_color = auto
     
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
@@ -154,7 +154,7 @@
     icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
 
     # Limit icons size.
-    max_icon_size=128
+    max_icon_size=32
 
 [shortcuts]
 
@@ -181,19 +181,22 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#1D2021"
-    foreground = "#B7A98C"
+    background = "#1A1A1A"
+    foreground = "#9ABDBD"
     timeout = 10
+    icon = /home/mrbrownstone/.config/dunst/normal.png
 
 [urgency_normal]
-    background = "#1D2021"
-    foreground = "#B7A98C"
+    background = "#1A1A1A"
+    foreground = "#9ABDBD"
     timeout = 10
+    icon = /home/mrbrownstone/.config/dunst/normal.png
 
 [urgency_critical]
-    background = "#1D2021"
-    foreground = "#B7A98C"
+    background = "#1A1A1A"
+    foreground = "#9ABDBD"
     timeout = 0
+    icon = /home/mrbrownstone/.config/dunst/normal.png
 
 
 # Every section that isn't one of the above is interpreted as a rules to

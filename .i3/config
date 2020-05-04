@@ -10,7 +10,6 @@ set $mod Mod4
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 new_window pixel 1
 new_float none
-
 # Hide borders
 hide_edge_borders none
 
@@ -18,6 +17,7 @@ hide_edge_borders none
 bindsym $mod+u border none
 bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
+
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -34,7 +34,7 @@ bindsym $mod+Return exec --no-startup-id st
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec "dmenu_run -nf '#EBDBB2' -nb '#1D2021' -sb '#B8BB26' -sf '#1D2021' -fn 'Inconsolata-11'"
+bindsym $mod+d exec "dmenu_run -nf '#9ABDBD' -nb '#222222' -sb '#9ABDBD' -sf '#222222' -fn 'Lucida Console:pixelsize=13'"
 
 #launch surf
 bindsym Ctrl+Shift+s exec tabbed surf -Pe
@@ -170,7 +170,7 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 "1"
+set $ws1 "1" 
 set $ws2 "2" 
 set $ws3 "3" 
 set $ws4 "4" 
@@ -224,9 +224,12 @@ assign [class="tabbed"] $ws3
 
 assign [class="qBittorrent"] $ws4
 assign [class="Transmission-gtk"] $ws4
+assign [class="Deluge"] $ws4
 
 assign [class="Epdfview"] $ws5
 assign [class="okular"] $ws5
+assign [class="Zathura"] $ws5
+
 
 assign [class="Pcmanfm"] $ws6
 assign [class="Thunar"] $ws6
@@ -380,7 +383,7 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 #   class                   border  backgr. text    indic.   child_border
-    client.focused          #000000 #C50ED2  #FDF6E3
+    client.focused          #000000 #9ABDBD  #FDF6E3
 #  client.focused_inactive #212020 #212020 #1ABC9C #454948
 #  client.unfocused        #212020 #E99280 # #454948
 #  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
@@ -395,6 +398,10 @@ bindsym $mod+m bar mode toggle
 # Set inner/outer gaps
 gaps inner 15
 gaps outer 0
+
+#gaps top for polybar 
+#gaps top 15
+#gaps bottom 25
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
