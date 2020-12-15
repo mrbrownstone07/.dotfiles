@@ -5,7 +5,22 @@ I am currently using Manjaro 20.2 Nibia
 
 ### A view of my rice
 ![wall](/pics/wall.png)
-Format: ![Alt Text](url)
+*Basic workspace*
+
+![thunar](/pics/thunar.png)
+*Thunar file browser and ncmpcpp*
+
+![ncmpcpp](/pics/ncmpcpp.png)
+*ncmpcpp with script to notify now playing song info using dunst*
+
+![firefox home page](/pics/firefox-start-page.png)
+*Custom firefox home page*
+
+![code](/pics/code.png)
+*Coding something useless in vscode*
+
+
+
 
 ### Packages Used
 - Rofi 
