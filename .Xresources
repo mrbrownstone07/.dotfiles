@@ -5,138 +5,6 @@
 !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-!--------------------------------------------------------------------
-!
-!   my theme -1
-!
-!--------------------------------------------------------------------
-
-!special
-!*.foreground:   #BFDC89
-!*.background:   #000000
-!*.cursorColor:  #BA1C33 
-!
-!*.color0:     #000000
-!*.color8:     #4D4D4D
-!*.color1:     #FF5555
-!*.color9:     #FF6E67
-!*.color2:     #50FA7B
-!*.color10:    #5AF78E
-!*.color3:     #F1FA8C
-!*.color11:    #0CB07D
-!*.color4:     #BD93F9
-!*.color12:    #CAA9FA
-!*.color5:     #FF79C6
-!*.color13:    #FF92D0
-!*.color6:     #8BE9FD
-!*.color14:    #9AEDFE
-!*.color7:     #BFBFBF
-!*.color15:    #E6E6E6
-
-!--------------------------------------------------------------------
-!
-!   gruv-box
-!
-!--------------------------------------------------------------------
-
-!main
-
-!*background: #0C0C0D
-!*foreground: #ebdbb2
-!*cursor:     #CD68D3
-
-!*color0:  #282828
-!*color8:  #928374
-!*color1:  #cc241d
-!*color9:  #fb4934
-!*color2:  #98971a
-!*color10: #b8bb26
-!*color3:  #d79921
-!*color11: #fabd2f
-!*color4:  #458588
-!*color12: #83a598
-!*color5:  #b16286
-!*color13: #d3869b
-!*color6:  #689d6a
-!*color14: #8ec07c
-!*color7:  #a89984
-!*color15: #ebdbb2
-
-
-!additonal scheme
-
-!*.color24:  #076678
-!*.color66:  #427b58
-!*.color88:  #9d0006
-!*.color96:  #8f3f71
-!*.color100: #79740e
-!*.color108: #8ec07c
-!*.color109: #83a598
-!*.color130: #af3a03
-!*.color136: #b57614
-!*.color142: #b8bb26
-!*.color167: #fb4934
-!*.color175: #d3869b
-!*.color208: #fe8019
-!*.color214: #fabd2f
-!*.color223: #ebdbb2
-!*.color228: #f2e5bc
-!*.color229: #fbf1c7
-!*.color230: #f9f5d7
-!*.color234: #1d2021
-!*.color235: #282828
-!*.color236: #32302f
-!*.color237: #3c3836
-!*.color239: #504945
-!*.color241: #665c54
-!*.color243: #7c6f64
-!*.color244: #928374
-!*.color245: #928374
-!*.color246: #a89984
-!*.color248: #bdae93
-!*.color250: #d5c4a1
-
-
-!sweet-dark
-
-! special
-!*.foreground:   #c3c7d1
-!*.background:   #161925
-!*.cursorColor:  #c3c7d1
-
-! black
-!*.color0:       #282c34
-!*.color8:       #282c34
-
-! red
-!*.color1:       #ed254e
-!*.color9:       #ed254e
-
-! green
-!*.color2:       #71f79f
-!*.color10:      #71f79f
-
-! yellow
-!*color3:       #f9dc5c
-!*color11:      #f9dc5c
-
-! blue
-!*.color4:       #7cb7e1
-!*.color12:      #7cb7e1
-
-! magenta
-!*.color5:       #c74ded
-!*.color13:      #c74ded
-
-! cyan
-!*.color6:       #00c1e4
-!*.color14:      #00c1e4
-
-! white
-!*.color7:       #dcdfe4
-!*.color15:      #dcdfe4
-
-
 !----------------------------------------------------------
 !
 !   ayu - dark
@@ -145,50 +13,66 @@
 
 
 ! Special
-
-*.foreground:   #b3b1ad
-*.background:   #0a0e14
+*.background:   #0A0B11
+!*.foreground:   #b3b1ad
 *.cursorColor:  #e6b450
 !*.color0:       #0a0e14
 !*.color8:       #1f2430
-*.color1:       #ff3333
-*.color9:       #ff3333
-*.color2:       #c2d94c
-*.color10:      #bae67e
-*.color3:       #ffb454
-*.color11:      #ffd580
-*.color4:       #59c2ff
-*.color12:      #73d0ff
-*.color5:       #f07178
-*.color13:      #f28779
-*.color6:       #95e6cb
-*.color14:      #95e6cb
-*.color7:       #ffffff
-*.color15:      #ffffff
+!*.color1:       #ff3333
+!*.color9:       #ff3333
+!*.color2:       #c2d94c
+!*.color10:      #bae67e
+!*.color3:       #ffb454
+!*.color11:      #ffd580
+!*.color4:       #59c2ff
+!*.color12:      #73d0ff
+!*.color5:       #f07178
+!*.color13:      #f28779
+!*.color6:       #95e6cb
+!*.color14:      #95e6cb
+!*.color7:       #ffffff
+!*.color15:      #ffffff
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
-!
-!   custom shceme
-!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!nord
 
-*.color0:       #696f61
-*.color8:       #8c7a7a
-!*.color1:       #e84f4f
-!*.color9:       #d23d3d
-!*.color2:       #b8d68c
-!*.color10:      #a0cf5d
-!*.color3:       #e1aa5d
-!*.color11:      #f39d21
-!*.color4:       #7dc1cf
-!*.color12:      #4e9fb1
-!*.color5:       #9b64fb
-!*.color13:      #8542ff
-!*.color6:       #6d878d
-!*.color14:      #42717b
-!*.color7:       #dddddd
-!*.color15:      #dddddd
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
 
+*.foreground:   nord4
+*.cursorColor:  nord4
+*fading: 35
+*fadeColor: nord3
+
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6
 
 !-------------------------------------------------------------------
 !
@@ -196,8 +80,8 @@
 !
 !--------------------------------------------------------------------
 !St.font: Liberation Mono:pixelsize=13:antialias=true:autohint=true;
-!St.font: Ubuntu Mono Nerd Font:pixelsize=15;
+!St.font: Hack Nerd Font:pixelsize=15;
 St.font: Lucida Console:pixelsize=13;
-st.internalBorder: 20px
-*.alpha: .85
-st.borderpx: 10
+st.internalBorder: 30px
+*.alpha: 0.85
+st.borderpx: 20

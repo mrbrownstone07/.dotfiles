@@ -8,7 +8,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 1
+new_window none
 new_float none
 # Hide borders
 hide_edge_borders none
@@ -22,6 +22,7 @@ bindsym $mod+n border normal
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font xft:URWGothic-Book 11
+#font Lucida Console 9
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -34,7 +35,7 @@ bindsym $mod+Return exec --no-startup-id st
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec "dmenu_run -nf '#9ABDBD' -nb '#222222' -sb '#9ABDBD' -sf '#222222' -fn 'Lucida Console:pixelsize=13'"
+#bindsym $mod+z exec "dmenu_run -nf '#9ABDBD' -nb '#222222' -sb '#9ABDBD' -sf '#222222' -fn 'Lucida Console:pixelsize=13'"
 
 #launch surf
 bindsym Ctrl+Shift+s exec tabbed surf -Pe
@@ -44,24 +45,28 @@ bindsym Ctrl+Shift+s exec tabbed surf -Pe
 ################################################################################################
 
         #start rofi (run mode)
-        #bindsym $mod+d exec rofi -show run -i -lines 15 -eh 1 -width 50 -padding 10
-
-        #rofi(combi mode)
-        #bindsym $mod+d exec rofi -show combi -line 15 -width 50
+        bindsym $mod+d exec rofi -show drun -lines 8 
+        
+	#rofi(combi mode)
+        bindsym $mod+z exec rofi -show run -line 15 -width 50
         
         #rofi(kill mode)
         #bindsym $mod+x exec rofi -show Kill -i -lines 6 -eh 1 -width 50 -modi Kill:$HOME/.i3/rofi/kill.sh
         
         #rofi (window switch mode)
-        #bindsym $mod+Tab exec rofi -show window -i -lines 6 -eh 1 -width 50 -padding
+        bindsym $mod+Tab exec rofi -show window -lines 4
 
         #rofi (power mode)
         #bindsym $mod+z exec rofi -show Power -i -lines 6 -eh 1 -width 50 -modi Power:$HOME/.i3/rofi/power.sh  
+        
+        #rofi calculator mode
+        bindsym $mod+c exec  rofi -show calc -modi calc -no-show-match -no-sort -lines 8   
 
 ################################################################################################
 
 # launch categorized menu
 #bindsym $mod+z exec --no-startup-id morc_menu
+#bindsym $mod+z exec rofi -show run -lines 8 -show-icons
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -98,6 +103,8 @@ bindsym $mod+F3 exec firefox
 bindsym $mod+F4 exec pcmanfm
 #bindsym $mod+Shift+F4 exec gksu pcmanfm
 bindsym $mod+F6 exec st -e ncmpcpp  
+
+
 
 # focus_follows_mouse no
 
@@ -150,7 +157,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # toggle sticky
-bindsym $mod+Shift+s sticky toggle
+#bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -170,14 +177,15 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 "1" 
-set $ws2 "2" 
-set $ws3 "3" 
-set $ws4 "4" 
-set $ws5 "5" 
-set $ws6 "6" 
-set $ws7 "7" 
-set $ws8 "8" 
+set $ws1 ""
+set $ws2 ""
+set $ws3 ""
+set $ws4 ""
+set $ws5 ""
+set $ws6 ""
+set $ws7 ""
+set $ws8 ""
+
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -214,7 +222,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 assign [class="Code"] $ws2
 assign [class="code-oss"] $ws2
 assign [class="Mousepad"] $ws2
-assign [class="Subl3"] $ws2
+assign [class="Subl"] $ws2
 assign [class="Atom"] $ws2
 
 assign [class="firefox"] $ws3
@@ -225,11 +233,11 @@ assign [class="tabbed"] $ws3
 assign [class="qBittorrent"] $ws4
 assign [class="Transmission-gtk"] $ws4
 assign [class="Deluge"] $ws4
+assign [class="Mailspring"] $ws4
 
 assign [class="Epdfview"] $ws5
 assign [class="okular"] $ws5
 assign [class="Zathura"] $ws5
-
 
 assign [class="Pcmanfm"] $ws6
 assign [class="Thunar"] $ws6
@@ -251,7 +259,7 @@ for_window [class="Lxappearance"] floating enable sticky enable
 for_window [class="Manjaro-hello"] floating enable
 for_window [class="Manjaro Settings Manager"] floating enable 
 for_window [title="MuseScore: Play Panel"] floating enable
-#for_window [class="Nitrogen"] floating enable sticky enable 
+for_window [class="Nitrogen"] floating enable sticky enable 
 for_window [class="Oblogout"] fullscreen enable
 for_window [class="octopi"] floating enable
 for_window [title="About Pale Moon"] floating enable
@@ -329,18 +337,18 @@ exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
-# exec --no-startup-id blueman-applet
+# exec --no-startup-id clipit
+exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-#exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
+# exec --no-startup-id start_conky_maia
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id st
 #exec --no-startup-id lxsession
-exec --no-startup-id devilspie
-
+# exec --no-startup-id devilspie
+exec --no-startup-id notify-send 'Hello mrbrownstone'
+exec --no-startup-id mailspring --background
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -451,3 +459,4 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
