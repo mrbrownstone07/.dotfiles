@@ -1,0 +1,3 @@
+[submodule ".themes/mayu_dark_theme_xfce_3.1"]
+	path = .themes/mayu_dark_theme_xfce_3.1
+	url = https://github.com/mrbrownstone07/Mayu_dark_gtk_theme
